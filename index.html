@@ -56,10 +56,12 @@
 
                     </div>
                     <div class="div4">
-                        <hr>
+                       
                     </div>
                     <div class="div2">
-                        <div id="div2"><i class="fas fa-utensils-alt"></i></div>
+                        <div id="div2">
+                            <i class="fas fa-utensils-alt"></i>
+                        </div>
                         <div class="left-side-container">
                             <label>Set Lunch Time</label>
                             <select id="lunchTimeSelector">
@@ -90,6 +92,9 @@
                                 <option value="24">12 AM - 1 AM</option>                         
                             </select>
                         </div>
+                    </div>
+                    <div class="div4">
+                        
                     </div>
                     <div class="div3">
                         <div id="div3"></div>
@@ -127,9 +132,12 @@
 
                 </div>
                 <div class="gridItem3">
-                    <button id="setTimeBtn">SET TIME !!!</button>
+                    <button id="setTimeBtn" onclick="setTime()">SET TIME !!!</button>
                 </div>
                 <div class="gridItem4">
+                    <p class="msg" id="msg1"></p>
+                    <p class="msg"  id="msg2"></p>
+                    <p class="msg"  id="msg3"></p>
 
                 </div>
                 
@@ -141,7 +149,7 @@
                     </div>
 
                     <div id="clock1">
-                        <p id="hours">00</p>
+                        <p id="hours">10</p>
                         <p>hours</p>
                     </div>
 
@@ -160,11 +168,8 @@
                     </div>
 
                     <div id="clock4">
-                        <h1 class="">PM</h1>
+                        <p id="amPm">AM</p>
                     </div>
-
-
-
 
 
 
@@ -172,14 +177,15 @@
                     <div class="lowerBlock-2"></div>
 
 
-
-
                 </div>
                 <div class="grid2Item2" id="digitalClockPic">
                     <div id="textGreeting">
-
+                    Hii , Have a Good Day !!
                     </div>
                     <div id="pictureGreeting">
+
+                        <img class="WelCome" src="./images/ballonImg.png">
+                        
 
                     </div>
 
@@ -188,11 +194,6 @@
             </div>
         </div>
 
-
-
-
-
-
-        <script src="" async defer></script>
+        <script src="./index.js" async defer></script>
     </body>
 </html>
