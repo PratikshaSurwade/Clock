@@ -1,4 +1,8 @@
 
+
+let flag=false;
+
+
 setInterval(currentTime, 1000);
 
 
@@ -57,12 +61,16 @@ function currentTime(){
 
     //Checking for Values of Wakeup time , lunch time and Dinner time
 
-    setTime();
+    if(flag==true){
+        setTime();
+    }
 }
 
 
 
 function setTime(){
+    flag=true;
+    console.log(" flag=true");
     let today = new Date();
 
     let hours=document.getElementById('hours');
@@ -80,6 +88,8 @@ function setTime(){
     let lunchTime = document.getElementById('lunchTimeSelector');
     let lunchTimeSelected = lunchTime.options[lunchTime.selectedIndex].value;
     let lunchMsgSelected = lunchTime.options[lunchTime.selectedIndex].text;
+
+    //Selecting Dinner Time
 
 
     let napTime = document.getElementById('napTimeSelector');
