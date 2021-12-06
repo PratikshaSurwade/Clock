@@ -136,7 +136,7 @@ function setTime(){
             // console.log("Hey, Lets Have some Dinner !!")
         }
         else{
-            document.getElementById('textGreeting').innerHTML="Hii , Have a Good Day !!";
+            document.getElementById('textGreeting').innerHTML=" Hii !! ..";
             document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/ballonImg.png">`;
         }
 
