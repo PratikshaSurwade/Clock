@@ -36,9 +36,18 @@ body{
 }
 .gridItem1{
     width: 90%;
-    background-size: 100% 100%;
-    background-image: url("./images/clockpic.jpg");
+    background-size: 25% 100%;
+    background-image: url("./images/clock.jpg");
     background-repeat: no-repeat;
+     display: flex; 
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 3.5rem; 
+    /* font-family: 'Abril Fatface', cursive; */
+/* font-family: 'Josefin Sans', sans-serif; */
+font-family: 'Permanent Marker', cursive;
+font-weight: 1000; 
 
 }
 
@@ -378,13 +387,13 @@ label{
 
 @media only  screen and (min-width:1025px) and (max-width:1200px){
     html{
-        font-size: 80%;
+        font-size: 85%;
     }
     .container1,.container2{
         margin: 2%;  
     }
 }
-@media only  screen and (min-width:1200px){
+/* @media only  screen and (min-width:1200px){
     html{
         font-size: 85%;
     }
@@ -394,4 +403,4 @@ label{
     .container2{
         margin: 2%;  
     }
-}
+} */
