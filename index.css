@@ -3,10 +3,6 @@ body{
     font-family: adobe-clean,sans-serif;
 }
 
-
-
-
-
 .main-container{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -350,7 +346,7 @@ label{
 }
 @media only  screen and (min-width:481px) and (max-width:769px){
     html{
-        font-size: 70%;
+        font-size: 75%;
     }
     .main-container{
         display: block;
@@ -378,16 +374,16 @@ label{
 
 @media only  screen and (min-width:769px) and (max-width:1024px){
     html{
-        font-size: 67%;
+        font-size: 60%;
     }
     .container1,.container2{
         margin: 2%;  
     }
 }
 
-@media only  screen and (min-width:1025px) and (max-width:1200px){
+@media only  screen and (min-width:1025px) and (max-width:1280px){
     html{
-        font-size: 85%;
+        font-size: 80%;
     }
     .container1,.container2{
         margin: 2%;  
