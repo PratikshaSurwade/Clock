@@ -62,7 +62,7 @@ function currentTime(){
     //Checking for Values of Wakeup time , lunch time and Dinner time
 
     if(flag==true){
-        setTime();
+        dispalyBlock();
     }
 }
 
@@ -96,15 +96,16 @@ function setTime(){
     let napTimeSelected = napTime.options[napTime.selectedIndex].value;
     let napMsgSelected = napTime.options[napTime.selectedIndex].text;
 
+    dispalyBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected);
 
-    //Displaying Block
+    // //Displaying Block
 
-    document.querySelector(".gridItem4").style.display = "block";
+    // document.querySelector(".gridItem4").style.display = "block";
 
-    //Displaying Info submitted
-    document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
-    document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
-    document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
+    // //Displaying Info submitted
+    // document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
+    // document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
+    // document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
                     
  
 
@@ -142,3 +143,18 @@ function setTime(){
 
 
 }
+ function dispalyBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
+     
+    //Displaying Block
+
+    document.querySelector(".gridItem4").style.display = "block";
+
+    //Displaying Info submitted
+    document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
+    document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
+    document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
+    console.log(wakeUpMsgSelected);
+    console.log(lunchMsgSelected);
+    console.log(napMsgSelected);
+         
+ }
