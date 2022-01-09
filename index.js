@@ -62,7 +62,7 @@ function currentTime(){
     //Checking for Values of Wakeup time , lunch time and Dinner time
 
     if(flag==true){
-        dispalyBlock();
+        getTime();
     }
 }
 
@@ -71,11 +71,7 @@ function currentTime(){
 function setTime(){
     flag=true;
     console.log(" flag=true");
-    let today = new Date();
-
-    let hours=document.getElementById('hours');
-
-    hours=today.getHours();
+    
    
     //Selecting Wakeup time
 
@@ -96,54 +92,22 @@ function setTime(){
     let napTimeSelected = napTime.options[napTime.selectedIndex].value;
     let napMsgSelected = napTime.options[napTime.selectedIndex].text;
 
-    dispalyBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected);
 
-    // //Displaying Block
+    displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected);
 
-    // document.querySelector(".gridItem4").style.display = "block";
-
-    // //Displaying Info submitted
-    // document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
-    // document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
-    // document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
-                    
- 
-
-    // console.log(wakeUpMsgSelected);
-    // console.log(lunchMsgSelected);
-    // console.log(napMsgSelected);
-
-
-    // console.log(wakeUpTimeSelected);
-    // console.log(lunchTimeSelected);
-    // console.log(napTimeSelected);
 
     
-        if ( wakeUpTimeSelected== hours) {
-            document.getElementById('textGreeting').innerHTML="Hey, Lets Have some BreakFast !!";
-            document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="images/breakFastTime.png"></img>`;
-            // console.log("Hey, Lets Have some BreakFast !!")
-        }
-        
-        else if ( lunchTimeSelected== hours) {
-            document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Lunch !!";
-            document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/lunch.png">`;
-            // console.log("Hey, Lets Have some Lunch !!")
-        }
+    document.getElementById('msg_1').innerHTML = `${wakeUpTimeSelected}`;
 
-         else if ( napTimeSelected== hours) {
-            document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Dinner !!";
-            document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/dinnertime.png">`;
-            // console.log("Hey, Lets Have some Dinner !!")
-        }
-        else{
-            document.getElementById('textGreeting').innerHTML=" Hii !! ..";
-            document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/ballonImg.png">`;
-        }
+    document.getElementById('msg_2').innerHTML = `${lunchTimeSelected}`;
+
+    document.getElementById('msg_3').innerHTML = `${napTimeSelected}`;
 
 
 }
- function dispalyBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
+
+
+function displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
      
     //Displaying Block
 
@@ -153,8 +117,58 @@ function setTime(){
     document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
     document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
     document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
-    console.log(wakeUpMsgSelected);
-    console.log(lunchMsgSelected);
-    console.log(napMsgSelected);
+
+    // console.log(wakeUpMsgSelected);
+    // console.log(lunchMsgSelected);
+    // console.log(napMsgSelected);
          
- }
+}
+
+function getTime(){
+
+    //Getting selected time
+
+     const time1 =  document.getElementById('msg_1');
+     const time2 = document.getElementById('msg_2');
+     const time3  =  document.getElementById('msg_3');
+    console.log(time1.innerText);
+    console.log(time2.innerText);
+    console.log(time3 .innerText);
+
+    const finalwakeupTime =  time1.innerText;
+    const finallunchTime = time2.innerText;
+    const finaldinnerTime  = time3 .innerText;
+
+
+    //reaaranging hours
+
+    let today = new Date();
+
+    let hours=document.getElementById('hours');
+
+    hours=today.getHours();
+
+    //Setup for change in image as  per set time
+
+    if ( finalwakeupTime == hours) {
+        document.getElementById('textGreeting').innerHTML="Hey, Lets Have some BreakFast !!";
+        document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="images/breakFastTime.png"></img>`;
+        // console.log("Hey, Lets Have some BreakFast !!")
+    }
+    
+    else if ( finallunchTime == hours) {
+        document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Lunch !!";
+        document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/lunch.png">`;
+        // console.log("Hey, Lets Have some Lunch !!")
+    }
+
+     else if ( finaldinnerTime == hours) {
+        document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Dinner !!";
+        document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/dinnertime.png">`;
+        // console.log("Hey, Lets Have some Dinner !!")
+    }
+    else{
+        document.getElementById('textGreeting').innerHTML=" Hii !! ..";
+        document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/ballonImg.png">`;
+    }
+}

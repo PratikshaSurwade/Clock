@@ -201,6 +201,9 @@ label{
     color: white;
     font-size: 1rem;
 }
+.data_Hide{
+    display: none;
+}
 #textGreeting{
     background-color: white;
     border-radius: 10px;
