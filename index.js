@@ -1,16 +1,12 @@
 
-
 let flag=false;
 
-
 setInterval(currentTime, 1000);
-
 
 function currentTime(){
     //Setting Current time
 
     let today = new Date();
-
 
     let hours=document.getElementById('hours');
     hours.innerHTML=`${today.getHours()}`
@@ -22,14 +18,12 @@ function currentTime(){
     let secs=document.getElementById('secs');
     secs.innerHTML=`${today.getSeconds()}`
 
-
     //Considering Am - Pm 
     if (hours==0 || hours==12){
         let Hours=12;
         
         document.getElementById('hours').innerHTML=Hours;
     }
-
 
     else if(hours<12){
         let amPm=document.getElementById('amPm');
@@ -95,8 +89,6 @@ function setTime(){
 
     displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected);
 
-
-    
     document.getElementById('msg_1').innerHTML = `${wakeUpTimeSelected}`;
 
     document.getElementById('msg_2').innerHTML = `${lunchTimeSelected}`;
@@ -117,10 +109,6 @@ function displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
     document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
     document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
     document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
-
-    // console.log(wakeUpMsgSelected);
-    // console.log(lunchMsgSelected);
-    // console.log(napMsgSelected);
          
 }
 
@@ -153,19 +141,16 @@ function getTime(){
     if ( finalwakeupTime == hours) {
         document.getElementById('textGreeting').innerHTML="Hey, Lets Have some BreakFast !!";
         document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="images/breakFastTime.png"></img>`;
-        // console.log("Hey, Lets Have some BreakFast !!")
     }
     
     else if ( finallunchTime == hours) {
         document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Lunch !!";
         document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/lunch.png">`;
-        // console.log("Hey, Lets Have some Lunch !!")
     }
 
      else if ( finaldinnerTime == hours) {
         document.getElementById('textGreeting').innerHTML="Hey, Lets Have some Dinner !!";
         document.getElementById('pictureGreeting').innerHTML=`<img class="WelCome" src="./images/dinnertime.png">`;
-        // console.log("Hey, Lets Have some Dinner !!")
     }
     else{
         document.getElementById('textGreeting').innerHTML=" Hii !! ..";
