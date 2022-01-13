@@ -87,6 +87,7 @@ function setTime(){
     let napMsgSelected = napTime.options[napTime.selectedIndex].text;
 
 
+    
     displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected);
 
     document.getElementById('msg_1').innerHTML = `${wakeUpTimeSelected}`;
@@ -101,6 +102,7 @@ function setTime(){
 
 function displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
      
+    if(wakeUpMsgSelected != "Default" && lunchMsgSelected != "Default" && napMsgSelected!= "Default"){
     //Displaying Block
 
     document.querySelector(".gridItem4").style.display = "block";
@@ -109,9 +111,11 @@ function displayBlock(wakeUpMsgSelected,lunchMsgSelected,napMsgSelected){
     document.getElementById('msg1').innerHTML=` Wakeup Time :  ${wakeUpMsgSelected}`;
     document.getElementById('msg2').innerHTML=`Lunch Time :  ${lunchMsgSelected}`;
     document.getElementById('msg3').innerHTML=`Dinner Time :  ${napMsgSelected}`;
-         
+    }
+    else{
+        alert("Please select All Three Wakeup time , Lunch Time , Nap Time preperly before setting reminders");
+    }
 }
-
 function getTime(){
 
     //Getting selected time
